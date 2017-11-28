@@ -42,7 +42,7 @@ function ensureOrder(a, s1, s2) {
 
 function initAdvent() {
     let adventsActions = allAdventActions.slice();
-    let rng = new Math.seedrandom();
+    let rng = new Math.seedrandom('Ein Lichtlein brennt.');
 
     let remaining = adventsActions.length - fixedActions.length + 1;
     for (let i = 0; i < adventsActions.length; ++i) {
