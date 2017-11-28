@@ -97,6 +97,26 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* Colors:
+ * https://color.adobe.com/Operational-Field-2-color-theme-10210672/
+ * - Dark blue    004358
+ * - Green        1F8A70
+ * - Light green  BEDB39
+ * - Light orange FFE11A
+ * - Dark orange  FD7400
+ */
+
+html {
+    font-family: fantasy;
+    background-color: #FFE11A;
+    color: #004358;
+}
+
+#advent-container {
+    width: 30em;
+    margin: auto;
+    font-size: 1.5em;
+}
 
 
 
