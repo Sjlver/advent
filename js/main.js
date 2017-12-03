@@ -83,6 +83,10 @@ function setAdventText() {
     if (day >= 0 && day < adventsActions.length) {
         $('#advent-action').text(adventsActions[Math.floor(day)]);
     }
+
+    // Do this again the next day.
+    const tomorrow = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1);
+    setTimeout(setAdventText, tomorrow - today + 1000);
 }
 
 setAdventText();
