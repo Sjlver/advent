@@ -114,6 +114,7 @@ html {
 
 #advent-container {
     width: 30em;
+    max-width: 100%;
     margin: auto;
     font-size: 1.5em;
 }
