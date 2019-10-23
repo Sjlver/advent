@@ -3,34 +3,34 @@
 (function() {
 
 const allAdventActions = [
-    'DDR spielen',
-    'Disco Fox tanzen',
-    'Cha-cha-cha und Rumba tanzen',
-    'Salsa tanzen',
-    'Lobpreis singen',
+    'Plätzchen backen',
+    'Weihnachtsmusik machen',
+    'Bratäpfel essen',
+    'Joggen und telefonieren',
+    'Nachbarn beschenken',
     'Grittibänze backen',
-    'Eis essen',
-    'Spazieren gehen',
-    'Gipfeli zum Frühstück',
-    'Brot backen',
-    'Eine Sorte Plätzchen backen',
-    'Eine andere Sorte Plätzchen backen',
-    'Schlittschuhlaufen',
-    'PNG-Fotos von Moni anschauen',
-    'Jogurt machen',
-    'Dominion spielen',
-    'Agricola spielen',
-    'Kuchen backen',
-    'Einen Nachtspaziergang machen',
+    'Wochenende genießen (Puffer)',
+    'Wochenende genießen (Puffer)',
+    'Geocache suchen',
+    'Kulturpfade Laim begehen',
+    'DDR spielen',
+    'Kirchen der Umgebung ansehen',
+    'Torte im Detterbeck essen',
+    'Wochenende genießen (Puffer)',
+    'Wochenende genießen (Puffer)',
+    'Eis von Patagon Helados',
+    'Cocktails schlürfen',
+    'Fog of Love spielen',
+    'Moeraki Kemu spielen',
+    'Ins Schwimmbad gehen',
+    'Wochenende genießen (Puffer)',
+    'Wochenende genießen (Puffer)',
     'Heiße Schoki trinken',
-    'Fotos vom Adventskalender kleben',
-    'Candle-Light-Dinner',
-    'Weihnachtslieder singen',
-    'Weihnachtslieder einstudieren',
 ];
 
-const fixedActions = [6, 21];
+const fixedActions = [4, 6, 7, 8, 14, 15, 21, 22];
 
+// This function can be used for manual tweaks.
 function ensureOrder(a, s1, s2) {
     const i1 = a.indexOf(s1);
     const i2 = a.indexOf(s2);
@@ -62,10 +62,6 @@ function initAdvent() {
         [adventsActions[i], adventsActions[swapIndex]] = [adventsActions[swapIndex], adventsActions[i]];
     }
 
-    // Some manual tweaks
-    ensureOrder(adventsActions, 'Eine Sorte Plätzchen backen', 'Eine andere Sorte Plätzchen backen');
-    ensureOrder(adventsActions, 'Weihnachtslieder einstudieren', 'Weihnachtslieder singen');
-
     return adventsActions;
 }
 
@@ -74,7 +70,7 @@ function setAdventText() {
     const dayInMillis = 24 * 60 * 60 * 1000;
     const dateFormat = { weekday: 'long', month: 'long', day: 'numeric' };
 
-    const firstOfDecember = new Date(2017, 11, 1);
+    const firstOfDecember = new Date(2019, 11, 1);
     const today = new Date();
     const day = (today - firstOfDecember) / dayInMillis;
 
