@@ -85,6 +85,27 @@ function setAdventText() {
     setTimeout(setAdventText, tomorrow - today + 1000);
 }
 
+function setChristmasCarolProgess() {
+    const numPages = 117;
+    const dayInMillis = 24 * 60 * 60 * 1000;
+    const startDate = new Date(2019, 11, 1);
+    const endDate = new Date(2019, 11, 24);
+    const today = new Date();
+    const day = (today - startDate) / dayInMillis;
+    const totalDays = (endDate - startDate) / dayInMillis;
+
+    let target = Math.round(numPages * Math.floor(day + 1) / totalDays);
+    if (today < startDate) target = 0;
+    if (today >= endDate) target = numPages;
+
+    $('#christmascarol-pages').text(target.toString());
+
+    // Do this again the next day.
+    const tomorrow = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1);
+    setTimeout(setChristmasCarolProgess, tomorrow - today + 1000);
+}
+
 setAdventText();
+setChristmasCarolProgess();
 
 })();
